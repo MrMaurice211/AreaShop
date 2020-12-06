@@ -1,25 +1,24 @@
-# Maven stuff
-target
-
-.project
-.metadata
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
+# Eclipse
 .classpath
+.project
 .settings/
-.loadpath
+/bin/
 
-# Locally stored "Eclipse launch configurations"
-*.launch
-
-# IntelliJ IDEA
-*.iml
+# Intellij
 .idea
-dependency-reduced-pom.xml
+*.iml
+*.iws
+*.ipr
 
-desktop.ini
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+jars/
+
+# Gradle
+.gradle
+/build/
+/**/build/

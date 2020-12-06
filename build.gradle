@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+}
+
+dependencies {
+    implementation project(':areashop-interface')
+    implementation project(':areashop-spigot-1_15')
+    implementation project(':areashop-worldguard-7')
+    implementation project(':areashop-worldedit-7')
+    implementation project(':areashop')
+}
+
+shadowJar {
+    archiveFileName = "AreaShop.jar"
+}
+
+allprojects {
+    group = 'me.wiefferink'
+    version = 'parent'
+}
+
+allprojects {
+    apply plugin: 'java'
+
+    repositories {
+        mavenLocal()
+        maven { url = 'https://jitpack.io' }
+        maven { url = 'http://maven.wiefferink.me' }
+        maven { url = 'http://repo.maven.apache.org/maven2' }
+        maven { url = 'https://repo.codemc.io/repository/nms-local/' }
+        maven { url = 'https://maven.enginehub.org/artifactory/repo/' }
+    }
+
+    sourceCompatibility = '1.8'
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+}

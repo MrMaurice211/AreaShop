@@ -1,0 +1,15 @@
+dependencies {
+    compileOnly 'net.milkbowl.vault:VaultAPI:1.7'
+    compileOnly 'org.spigotmc:spigot:1.15.2-R0.1-SNAPSHOT'
+    compileOnly 'com.sk89q.worldedit:worldedit-bukkit:7.2.0-SNAPSHOT'
+    compileOnly 'com.sk89q.worldguard:worldguard-bukkit:7.0.5-SNAPSHOT'
+
+    implementation project(':areashop-interface')
+    implementation project(':areashop-worldedit-7')
+    implementation project(':areashop-spigot-1_15')
+    implementation project(':areashop-worldguard-7')
+    implementation 'me.wiefferink:bukkitdo:1.0.0-SNAPSHOT'
+    implementation 'me.wiefferink:interactivemessenger:1.1-SNAPSHOT'
+}
+
+description = 'AreaShop'
